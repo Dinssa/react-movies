@@ -1,0 +1,11 @@
+.MovieCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    text-shadow: 2px 3px 6px #1d1551;
+    font-weight: 800;
+    /* -webkit-text-stroke: 1px rgb(255, 255, 255); */
+}

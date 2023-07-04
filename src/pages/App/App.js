@@ -9,6 +9,8 @@ import MoviesListPage from '../Movie/MoviesListPage';
 import ActorsListPage from '../Actor/ActorsListPage';
 import Nav from '../../components/global/Nav';
 
+import { movies } from "../../data.js";
+
 function App() {
   const [user, setUser] = useState(null)
 
@@ -25,8 +27,8 @@ function App() {
       <>
         <Nav/>
         <Routes>
-          <Route path="/" element={<MoviesListPage />} />
-          <Route path="/movies/:movieId" element={<MovieDetailPage />} />
+          <Route path="/" element={<MoviesListPage movies={movies}/>} />
+          <Route path="/movies/:movieTitle" element={<MovieDetailPage />} />
           <Route path="/actors" element={<ActorsListPage />} />    
         </Routes>      
       </>
