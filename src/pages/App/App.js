@@ -7,9 +7,15 @@ import LoginPage from '../Auth/LoginPage';
 import MovieDetailPage from '../Movie/MovieDetailPage';
 import MoviesListPage from '../Movie/MoviesListPage';
 import ActorsListPage from '../Actor/ActorsListPage';
+import Nav from '../../components/global/Nav';
 
 function App() {
   const [user, setUser] = useState(null)
+
+  const handleLogin = (email, password) => {
+    setUser({email, password})
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,8 +23,9 @@ function App() {
       </header>
       {user ?
       <>
+        <Nav/>
         <Routes>
-          <Route path="/movies" element={<MoviesListPage />} />
+          <Route path="/" element={<MoviesListPage />} />
           <Route path="/movies/:movieId" element={<MovieDetailPage />} />
           <Route path="/actors" element={<ActorsListPage />} />    
         </Routes>      
