@@ -12,9 +12,8 @@ export default function MovieCard({movie}){
     }
 
     return (
-        <Link to="/movies/{movie.title}" className='MovieCard' style={background}>
+        <Link to={`/movies/${movie.title}`} className='MovieCard' style={background}>
             <h2>{movie.title}</h2>
-
             <p>Release Date: {movie.releaseDate}</p>
         </Link>
     )
