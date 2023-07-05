@@ -1,6 +1,6 @@
 import './MoviesListPage.css'
 
-import MovieCard from "./MovieCard"
+import MovieCard from "../../components/Movie/MovieCard"
 
 export default function MoviesListPage({movies}){
     return (
