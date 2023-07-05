@@ -7,6 +7,7 @@ import LoginPage from '../Auth/LoginPage';
 import MovieDetailPage from '../Movie/MovieDetailPage';
 import MoviesListPage from '../Movie/MoviesListPage';
 import ActorsListPage from '../Actor/ActorsListPage';
+import ActorDetailPage from '../Actor/ActorDetailPage';
 import Nav from '../../components/global/Nav';
 
 import { movies } from "../../data.js";
@@ -30,6 +31,7 @@ function App() {
           <Route path="/" element={<MoviesListPage movies={movies}/>} />
           <Route path="/movies/:movieTitle" element={<MovieDetailPage movies={movies} />} />
           <Route path="/actors" element={<ActorsListPage movies={movies}/>} />    
+          <Route path="/actor/:name" element={<ActorDetailPage movies={movies}/>} />    
         </Routes>      
       </>
         :

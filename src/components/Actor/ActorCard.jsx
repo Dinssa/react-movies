@@ -13,9 +13,9 @@ export default function ActorCard({actor}){
 
     return (
         <div className='ActorCard'>
-            <div className="inner" style={background}>
+            <Link to={`/actor/${actor}`} className="inner" style={background}>
                 <h3>{actor}</h3>
-            </div>
+            </Link>
         </div>
     )
 }

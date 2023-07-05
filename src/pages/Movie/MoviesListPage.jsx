@@ -7,8 +7,8 @@ export default function MoviesListPage({movies}){
         <main className="MoviesListPage">
             <h1>Movies List Page</h1>
             <ul className="MoviesList">
-                {movies.map(movie => (
-                    <li key={movie.id} className="Movie">
+                {movies.map((movie, index)=> (
+                    <li key={index} className="Movie">
                         <MovieCard movie={movie}/>
                     </li>
                 ))}
